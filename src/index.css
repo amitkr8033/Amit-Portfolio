@@ -1,0 +1,273 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000000;
+  color: #ffffff;
+  font-family: 'Outfit', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+#root {
+  min-height: 100vh;
+  width: 100%;
+}
+
+@keyframes autoScrollMockup {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(calc(-100% + 300px));
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.animate-autoscroll {
+  animation: autoScrollMockup 14s ease-in-out infinite;
+}
+
+.animate-autoscroll:hover {
+  animation-play-state: paused;
+}
+
+/* =========================================================================
+   PROJECT MOCKUP SMOOTH HOVER SCROLL
+   ========================================================================= */
+.mockup-scroll-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.mockup-scroll-img {
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  object-fit: cover;
+  object-position: top;
+  transform: translateY(0);
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mockup-scroll-container:hover .mockup-scroll-img {
+  transform: translateY(calc(-100% + 180px));
+  transition: transform 8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* =========================================================================
+   ANIMATED BORDER FLOW (Universal Neon Gradient Borders)
+   ========================================================================= */
+@keyframes cardBorderFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.card-animated-cyan {
+  position: relative;
+}
+.card-animated-cyan::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: 1.5rem;
+  padding: 1.5px;
+  background: linear-gradient(90deg, rgba(6, 182, 212, 0.95), rgba(59, 130, 246, 0.4), rgba(255, 255, 255, 0.85), rgba(6, 182, 212, 0.95));
+  background-size: 250% 250%;
+  animation: cardBorderFlow 4s ease infinite;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.card-animated-blue {
+  position: relative;
+}
+.card-animated-blue::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: 1.5rem;
+  padding: 1.5px;
+  background: linear-gradient(90deg, rgba(59, 130, 246, 0.95), rgba(147, 51, 234, 0.4), rgba(255, 255, 255, 0.85), rgba(59, 130, 246, 0.95));
+  background-size: 250% 250%;
+  animation: cardBorderFlow 4s ease infinite;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.card-animated-purple {
+  position: relative;
+}
+.card-animated-purple::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: 1.5rem;
+  padding: 1.5px;
+  background: linear-gradient(90deg, rgba(168, 85, 247, 0.95), rgba(236, 72, 153, 0.4), rgba(255, 255, 255, 0.85), rgba(168, 85, 247, 0.95));
+  background-size: 250% 250%;
+  animation: cardBorderFlow 4s ease infinite;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.card-animated-emerald {
+  position: relative;
+}
+.card-animated-emerald::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: 1.5rem;
+  padding: 1.5px;
+  background: linear-gradient(90deg, rgba(16, 185, 129, 0.95), rgba(6, 182, 212, 0.4), rgba(255, 255, 255, 0.85), rgba(16, 185, 129, 0.95));
+  background-size: 250% 250%;
+  animation: cardBorderFlow 4s ease infinite;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Pill / Navbar / Badge Flow */
+.pill-animated-flow {
+  position: relative;
+}
+.pill-animated-flow::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: 9999px;
+  padding: 1.5px;
+  background: linear-gradient(90deg, rgba(59, 130, 246, 0.9), rgba(168, 85, 247, 0.6), rgba(255, 255, 255, 0.9), rgba(6, 182, 212, 0.9));
+  background-size: 250% 250%;
+  animation: cardBorderFlow 4s ease infinite;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Rounded Box Flow */
+.box-animated-flow {
+  position: relative;
+}
+.box-animated-flow::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: 1rem;
+  padding: 1.5px;
+  background: linear-gradient(90deg, rgba(99, 102, 241, 0.9), rgba(168, 85, 247, 0.5), rgba(255, 255, 255, 0.85), rgba(59, 130, 246, 0.9));
+  background-size: 250% 250%;
+  animation: cardBorderFlow 4s ease infinite;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Small Badge Flow */
+.badge-animated-flow {
+  position: relative;
+}
+.badge-animated-flow::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: 0.75rem;
+  padding: 1px;
+  background: linear-gradient(90deg, rgba(6, 182, 212, 0.8), rgba(168, 85, 247, 0.6), rgba(255, 255, 255, 0.8), rgba(6, 182, 212, 0.8));
+  background-size: 250% 250%;
+  animation: cardBorderFlow 4s ease infinite;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* =========================================================================
+   BUTTON ROTATING BORDER BEAM ANIMATION (High-End Futuristic Capsule)
+   ========================================================================= */
+@keyframes spinBeam {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.premium-btn-beam {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  padding: 1.5px;
+}
+
+.premium-btn-beam::before {
+  content: '';
+  position: absolute;
+  width: 250%;
+  height: 250%;
+  top: -75%;
+  left: -75%;
+  background: conic-gradient(
+    transparent 0deg,
+    rgba(255, 255, 255, 0.15) 40deg,
+    rgba(255, 255, 255, 0.95) 90deg,
+    rgba(6, 182, 212, 0.9) 130deg,
+    transparent 180deg
+  );
+  animation: spinBeam 3.5s linear infinite;
+}
+
+.premium-btn-beam:hover::before {
+  animation-duration: 1.8s;
+}
+
+.premium-btn-inner {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1.25rem;
+  border-radius: 9999px;
+  background: rgba(0, 0, 0, 0.88);
+  color: #ffffff;
+  font-family: monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.premium-btn-beam:hover .premium-btn-inner {
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
