@@ -132,7 +132,8 @@ The optimized production bundle will be generated inside the `dist/` directory.
 - **Author:** Amit Kumar
 - **GitHub:** [@amitkr8033](https://github.com/amitkr8033)
 - **LinkedIn:** [Amit Kumar](https://www.linkedin.com/in/amit-kumar-25b8b02a7)
-- **Email:** [amit.kumar439306@gmail.com](mailto:amit.kumar439306@gmail.com)
+  <!-- - **Email:** [amit.kumar439306@gmail.com](mailto:amit.kumar439306@gmail.com) -->
+  email will come soon
 
 ---
 
