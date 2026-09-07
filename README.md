@@ -119,11 +119,11 @@ The optimized production bundle will be generated inside the `dist/` directory.
 
 2. **FOT Engineers** — Industrial & Precision Engineering Portal
    - _Tech:_ React.js, Tailwind CSS, Node.js, REST APIs
-   - _Live:_ [ndsinfotechitsolution.com/nds/fabotechEngineers](https://ndsinfotechitsolution.com/nds/fabotechEngineers/)
+   - _Live:_ [fabotech.in](https://fabotech.in/)
 
 3. **Career Buddy** — Career Acceleration & EdTech Platform
    - _Tech:_ MERN Stack, Redux, Cloud Storage, Tailwind CSS
-   - _Live:_ [ndsinfotechitsolution.com/nds/careerBuddy](https://ndsinfotechitsolution.com/nds/careerBuddy/)
+   - _Live:_ [careerbuddyscience.com](https://careerbuddyscience.com/)
 
 ---
 

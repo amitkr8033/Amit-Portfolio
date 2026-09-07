@@ -15,6 +15,8 @@ const projects = [
       'A scalable enterprise e-commerce platform implementing real-time product cataloging, high-speed browsing, client inquiry workflows, and modern responsive UI architectures.',
     liveUrl: 'https://harshdistributors.com/',
     image: harshImg,
+    scrollDuration: '18s',
+    returnDuration: '7s',
     cardAnimationClass: 'card-animated-cyan',
     badgeBorder: 'border-cyan-400/40 text-cyan-300 bg-cyan-950/30',
     accentText: 'text-cyan-400',
@@ -29,8 +31,10 @@ const projects = [
     tech: ['React.js', 'Tailwind CSS', 'Node.js', 'REST APIs'],
     description:
       'An industrial precision engineering digital architecture providing interactive service modules, showcase galleries, automated inquiry tracking, and high-speed data flow.',
-    liveUrl: 'https://ndsinfotechitsolution.com/nds/fabotechEngineers/',
+    liveUrl: 'https://fabotech.in/',
     image: fotImg,
+    scrollDuration: '14s',
+    returnDuration: '6s',
     cardAnimationClass: 'card-animated-blue',
     badgeBorder: 'border-blue-400/40 text-blue-300 bg-blue-950/30',
     accentText: 'text-blue-400',
@@ -45,8 +49,10 @@ const projects = [
     tech: ['MERN Stack', 'Redux', 'Cloud Storage', 'Tailwind CSS'],
     description:
       'A modern career acceleration platform with cataloging, interactive student engagement, optimized checkout flows, and cloud-backed data structures.',
-    liveUrl: 'https://ndsinfotechitsolution.com/nds/careerBuddy/',
+    liveUrl: 'https://careerbuddyscience.com/',
     image: careerImg,
+    scrollDuration: '24s',
+    returnDuration: '9s',
     cardAnimationClass: 'card-animated-purple',
     badgeBorder: 'border-purple-400/40 text-purple-300 bg-purple-950/30',
     accentText: 'text-purple-400',
@@ -160,7 +166,7 @@ export default function Projects() {
                 zIndex: index + 1,
               }}
             >
-              {/* Inner Card: 100% Transparent Background (No blur) & Hardware-Accelerated 3D Transform */}
+              {/* Inner Card: Exact Light Frosted Glass Blur (matching contact inputs) & Hardware-Accelerated 3D Transform */}
               <div
                 style={{
                   transform: `translate3d(0, ${translateY}px, 0) scale(${scale})`,
@@ -168,7 +174,7 @@ export default function Projects() {
                   transformOrigin: 'top center',
                   boxShadow: `0 -25px 50px rgba(0, 0, 0, 0.95), 0 0 35px ${project.glowColor}`,
                 }}
-                className={`${project.cardAnimationClass} rounded-3xl bg-transparent border border-white/20 p-5 sm:p-7 transition-transform duration-75 ease-out will-change-transform`}
+                className={`${project.cardAnimationClass} rounded-3xl bg-black/[0.05] backdrop-blur-sm border border-white/20 p-5 sm:p-7 transition-transform duration-75 ease-out will-change-transform`}
               >
                 {/* Header Row: Big Number, Title, Live Button */}
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-white/15">
@@ -231,19 +237,18 @@ export default function Projects() {
                         </span>
                       </div>
 
-                      {/* Image Container with Reliable CSS Hover-Scrolling */}
+                      {/* Image Container with Smooth Hover-Scroll & Return */}
                       <div className="w-full pt-6 h-full overflow-hidden">
                         <img
                           src={project.image}
                           alt={`${project.title} Preview Screenshot`}
                           className="mockup-scroll-img"
+                          style={{
+                            '--scroll-duration': project.scrollDuration,
+                            '--return-duration': project.returnDuration,
+                          }}
                           loading="lazy"
                         />
-                      </div>
-
-                      {/* Hover Hint Tag */}
-                      <div className="absolute bottom-2 right-2 z-20 px-2 py-0.5 rounded-full bg-black/90 border border-white/20 text-[9px] font-mono text-white group-hover/preview:opacity-0 transition-opacity pointer-events-none">
-                        Hover to Scroll ↕
                       </div>
                     </div>
                   </div>
