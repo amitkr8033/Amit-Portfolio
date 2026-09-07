@@ -19,28 +19,8 @@ body {
   width: 100%;
 }
 
-@keyframes autoScrollMockup {
-  0% {
-    transform: translateY(0%);
-  }
-  50% {
-    transform: translateY(calc(-100% + 300px));
-  }
-  100% {
-    transform: translateY(0%);
-  }
-}
-
-.animate-autoscroll {
-  animation: autoScrollMockup 14s ease-in-out infinite;
-}
-
-.animate-autoscroll:hover {
-  animation-play-state: paused;
-}
-
 /* =========================================================================
-   PROJECT MOCKUP SMOOTH HOVER SCROLL
+   PROJECT MOCKUP SMOOTH HOVER SCROLL & REVERSE
    ========================================================================= */
 .mockup-scroll-container {
   position: relative;
@@ -53,13 +33,14 @@ body {
   min-height: 100%;
   object-fit: cover;
   object-position: top;
-  transform: translateY(0);
-  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateY(0%);
+  transition: transform var(--return-duration, 7s) cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: transform;
 }
 
 .mockup-scroll-container:hover .mockup-scroll-img {
   transform: translateY(calc(-100% + 180px));
-  transition: transform 8s cubic-bezier(0.25, 1, 0.5, 1);
+  transition: transform var(--scroll-duration, 16s) ease-in-out;
 }
 
 /* =========================================================================

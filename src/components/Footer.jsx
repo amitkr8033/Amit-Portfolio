@@ -17,8 +17,8 @@ export default function Footer() {
 
   const projectItems = [
     { name: 'Harsh Enterprises', href: 'https://harshdistributors.com/', tag: 'E-Commerce' },
-    { name: 'FOT Engineers', href: 'https://ndsinfotechitsolution.com/nds/fabotechEngineers/', tag: 'Industrial' },
-    { name: 'Career Buddy', href: 'https://ndsinfotechitsolution.com/nds/careerBuddy/', tag: 'EdTech' },
+    { name: 'FOT Engineers', href: 'https://fabotech.in/', tag: 'Industrial' },
+    { name: 'Career Buddy', href: 'https://careerbuddyscience.com/', tag: 'EdTech' },
     { name: 'N.D.S Infotech', href: 'https://ndsinfotechitsolution.com/', tag: 'Agency' },
   ];
 
